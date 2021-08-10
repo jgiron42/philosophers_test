@@ -30,6 +30,7 @@ from test import Test
 from args import parse_args
 from suite import suite
 from helper import blue
+from helper import red
 
 
 def main():
@@ -44,7 +45,7 @@ def main():
             )
             print(blue("================================================================================"))
         except subprocess.CalledProcessError:
-            sys.exit(1)
+            print(red("Error with makefile"))
         if args.build:
             sys.exit(0)
 
@@ -53,11 +54,14 @@ def main():
     suite()
 
     try:
-        if args.philo == 0:
-            for philo in range(3):
+        if args.philo == "all":
+            for philo in range(2):
                 Test.run_all(config.PHILO_EXEC_PATHS[philo])
+        elif args.philo == "philo_bonus":
+            Test.run_all(config.PHILO_EXEC_PATHS[1])
         else:
-            Test.run_all(config.PHILO_EXEC_PATHS[args.philo - 1])
+            Test.run_all(config.PHILO_EXEC_PATHS[0])
+
     except KeyboardInterrupt:
         pass
     finally:

@@ -40,15 +40,13 @@ PAGER_CMD = ["less"]
 ################################################################################
 
 PHILO_PATHS = [
-    os.path.join(PROJECT_PATH, "philo_one"),
-    os.path.join(PROJECT_PATH, "philo_two"),
-    os.path.join(PROJECT_PATH, "philo_three")
+    os.path.join(PROJECT_PATH, "philo"),
+    os.path.join(PROJECT_PATH, "philo_bonus")
 ]
 
 PHILO_EXEC_PATHS = [
-    os.path.join(PHILO_PATHS[0], "philo_one"),
-    os.path.join(PHILO_PATHS[1], "philo_two"),
-    os.path.join(PHILO_PATHS[2], "philo_three")
+    os.path.join(PHILO_PATHS[0], "philo"),
+    os.path.join(PHILO_PATHS[1], "philo_bonus")
 ]
 
 INT_MIN   = -2147483648

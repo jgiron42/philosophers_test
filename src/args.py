@@ -38,15 +38,14 @@ def parse_args():
     parser.add_argument(
         "-p", "--philo",
         help=textwrap.dedent("""\
-            Number of the philosopher program to test
-             - 1: philo_one
-             - 2: philo_two
-             - 3: philo_three
-             - 0: all programs
+            The philosopher program to test
+             - philo
+             - philo_bonus
+             - all
         """),
-        type=int,
-        choices=[0, 1, 2, 3],
-        default=0
+        type=str,
+        choices=["philo", "philo_bonus", "all"],
+        default="philo"
     )
     parser.add_argument(
         "-b", "--build",

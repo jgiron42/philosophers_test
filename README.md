@@ -1,4 +1,6 @@
-# philosophers test
+# philosophers test 2021
+
+this repo is a fork of [philosophers_test](https://github.com/cacharle/philosophers_test.git) made by [cacharle](https://github.com/cacharle) adapted to the new subject (2021)
 
 Test for the philosophers project of school 42.
 
@@ -17,18 +19,17 @@ Clone this repository next to your project directory.
 
 ```
 $ ./run --help
-usage: run [-h] -p {0,1,2,3} [-b] [-g] [-t TIMEOUT]
+usage: run [-h] -p {"philo","philo_bonus","all"} [-b] [-g] [-t TIMEOUT]
 
 Philosophers test
 
 optional arguments:
   -h, --help            show this help message and exit
-  -p {0,1,2,3}, --philo {0,1,2,3}
-                        Number of the philosopher program to test
-                         - 1: philo_one
-                         - 2: philo_two
-                         - 3: philo_three
-                         - 0: all programs
+  -p PROGRAM, --philo
+                        The philosopher program to test
+                         - philo
+                         - philo_bonus
+                         - all
   -b, --build           Build and exit
   -g, --pager           Open result.log in a pager after the test
   -t TIMEOUT, --timeout TIMEOUT
